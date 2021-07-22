@@ -98,7 +98,7 @@ def yolo_forward(net, LABELS, image, confidence_level, save_image=False):
     print(idxs)
     
     if len(idxs) > 0:
-        filtered_idxs = idxs[0]
+        filtered_idxs = np.concatenate(idxs)
         print('after NMS, we have these indices')
         print(filtered_idxs)
     else:
